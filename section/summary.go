@@ -17,6 +17,5 @@ func (s *Summary) Edit() error {
 		return err
 	}
 	s.summary = lines
-	fmt.Println(s.summary)
 	return nil
 }

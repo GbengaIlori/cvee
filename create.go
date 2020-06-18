@@ -1,6 +1,8 @@
 package main
 
 import (
+	"fmt"
+
 	"github.com/thealamu/cvee/section"
 	"github.com/urfave/cli/v2"
 )
@@ -18,6 +20,8 @@ func editSections(sections []section.Section) error {
 		if err := s.Edit(); err != nil {
 			return err
 		}
+		// separate sections
+		fmt.Println()
 	}
 	return nil
 }
