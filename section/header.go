@@ -10,8 +10,6 @@ type Header struct {
 	data map[string]string
 }
 
-var reader = bufio.NewReader(os.Stdin)
-
 func (h *Header) init() {
 	//Init data map if not done already
 	if h.data == nil {
@@ -32,7 +30,7 @@ func (h *Header) Edit() error {
 	fmt.Println("Editing an entire section will overwrite its data")
 	for key := range h.data {
 		fmt.Print(key + ": ")
-		line, err := reader.ReadString('\n')
+		line, err := bufio.NewReader(os.Stdin).ReadString('\n')
 		if err != nil {
 			return err
 		}
