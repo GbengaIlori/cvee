@@ -14,6 +14,7 @@ var sections = []sect.Section{
 	&sect.Header{},
 	&sect.Summary{},
 	&sect.Skills{},
+	&sect.Experience{},
 }
 
 var (
