@@ -13,6 +13,7 @@ import (
 var sections = []sect.Section{
 	&sect.Header{},
 	&sect.Summary{},
+	&sect.Skills{},
 }
 
 var (
