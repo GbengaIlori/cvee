@@ -1,9 +1,15 @@
 package main
 
 import (
+	"log"
 	"os"
 
 	"github.com/urfave/cli/v2"
+)
+
+var (
+	infoLogger  = log.New(os.Stdout, "INFO: ", log.LstdFlags)
+	debugLogger = log.New(os.Stdout, "DEBUG: ", log.LstdFlags)
 )
 
 func main() {
