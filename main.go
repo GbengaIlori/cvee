@@ -12,6 +12,7 @@ import (
 //TODO: Fill up with other sections
 var sections = []sect.Section{
 	&sect.Header{},
+	&sect.Summary{},
 }
 
 var (
