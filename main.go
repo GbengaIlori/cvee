@@ -4,8 +4,15 @@ import (
 	"log"
 	"os"
 
+	sect "github.com/thealamu/cvee/section"
 	"github.com/urfave/cli/v2"
 )
+
+// Create a list of all the sections
+//TODO: Fill up with other sections
+var sections = []sect.Section{
+	&sect.Header{},
+}
 
 var (
 	infoLogger  = log.New(os.Stdout, "INFO: ", log.LstdFlags)
