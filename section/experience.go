@@ -25,7 +25,6 @@ func (e *Experience) Edit() error {
 
 	// populate points
 	err := populateSlice("Notable events / What you did (Empty string to stop): ", &e.points)
-
 	if err != nil {
 		return err
 	}
