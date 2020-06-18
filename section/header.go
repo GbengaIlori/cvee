@@ -29,6 +29,7 @@ func (h *Header) init() {
 //Edit allows a user edit this section
 func (h *Header) Edit() error {
 	h.init()
+	fmt.Println("Editing an entire section will overwrite its data")
 	for key := range h.data {
 		fmt.Print(key + ": ")
 		line, err := reader.ReadString('\n')
