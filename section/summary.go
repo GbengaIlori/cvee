@@ -1,9 +1,7 @@
 package section
 
 import (
-	"bufio"
 	"fmt"
-	"os"
 )
 
 type Summary struct {
@@ -12,7 +10,7 @@ type Summary struct {
 
 func (s *Summary) Edit() error {
 	fmt.Print("Resume Objective / Summary: ")
-	lines, err := bufio.NewReader(os.Stdin).ReadString('\n')
+	lines, err := getLongString()
 	if err != nil {
 		return err
 	}
