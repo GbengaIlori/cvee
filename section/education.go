@@ -1,5 +1,7 @@
 package section
 
+import "fmt"
+
 type Education struct {
 	data       map[string]string
 	coursework []string
@@ -19,6 +21,9 @@ func (e *Education) init() {
 
 //Edit allows a user edit this section
 func (e *Education) Edit() error {
+	fmt.Println(".................EDUCATION.................")
+	fmt.Println()
+
 	e.init()
 	if err := populateMap(&e.data); err != nil {
 		return err

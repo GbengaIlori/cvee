@@ -9,6 +9,8 @@ type Summary struct {
 }
 
 func (s *Summary) Edit() error {
+	fmt.Println(".................SUMMARY.................")
+	fmt.Println()
 	fmt.Print("Resume Objective / Summary: ")
 	lines, err := getLongString()
 	if err != nil {

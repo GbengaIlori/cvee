@@ -9,10 +9,12 @@ type Skills struct {
 }
 
 func (s *Skills) Edit() error {
+	fmt.Println(".................SKILLS.................")
+	fmt.Println()
+
 	err := populateSlice("Technologies & Skills (Empty string to stop): ", &s.data)
 	if err != nil {
 		return err
 	}
-	fmt.Println(s.data)
 	return nil
 }
